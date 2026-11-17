@@ -35,7 +35,7 @@ nav.menu .btn{margin-left:8px;padding:.6rem 1rem;font-size:.88rem}
 .burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .burger[aria-expanded=true] span:nth-child(2){opacity:0}
 .burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-@media(max-width:900px){
+@media(max-width:1180px){
  .burger{display:block}
  nav.menu{position:absolute;left:0;right:0;top:72px;background:#fff;flex-direction:column;align-items:stretch;padding:0 4%;box-shadow:0 20px 30px -20px rgba(11,42,74,.4);max-height:0;overflow:hidden;opacity:0;transition:max-height .45s ease,opacity .3s ease,padding .3s}
  nav.menu.open{max-height:520px;opacity:1;padding:8px 4% 20px}
@@ -142,3 +142,19 @@ footer.site a:hover{color:#fff}
 @media(max-width:900px){.hero-grid,.split,.foot{grid-template-columns:1fr}.split>:first-child{order:0}.grid-4,.grid-3{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.badge{left:12px}}
 @media(max-width:560px){.grid-4,.grid-3,.grid-2,.gallery{grid-template-columns:1fr}.bar>a img{height:36px}.fab{padding:14px 16px;font-size:.9rem}}
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal,.clip,.kick>*{opacity:1!important;transform:none!important;clip-path:none!important}}
+.member{display:flex;align-items:center;gap:22px;justify-content:center;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px 28px;box-shadow:0 14px 30px -24px rgba(11,42,74,.5)}
+.member img{height:86px;width:auto;border-radius:12px}
+.member b{font:800 1.15rem "Plus Jakarta Sans";color:var(--navy);display:block}
+.member span{color:var(--muted);font-size:.95rem}
+.kn-foot{height:52px;width:auto;background:#fff;border-radius:12px;padding:4px;margin-top:14px}
+.masonry{columns:3;column-gap:18px}
+.masonry>*{break-inside:avoid;margin-bottom:18px;display:block}
+.masonry img{width:100%;border-radius:18px}
+.photo{border-radius:20px;overflow:hidden;background:var(--sky);box-shadow:var(--shadow)}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.photo div{padding:14px 18px;color:var(--navy);font-weight:700;font-family:"Plus Jakarta Sans",sans-serif;font-size:.95rem}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps li{counter-increment:s;background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px}
+.steps li:before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;font:800 1rem "Plus Jakarta Sans";margin-bottom:12px}
+@media(max-width:900px){.masonry{columns:2}.steps{grid-template-columns:1fr}}
+@media(max-width:560px){.masonry{columns:1}.member img{height:64px}}
